@@ -1,0 +1,42 @@
+show databases;
+create database VITCampus;
+use VITCampus;
+create table CSE(
+sid int8,
+sname varchar(50),
+smarks int1
+);
+
+create table ECE(
+sid int8,
+sname varchar(50),
+smarks int1
+);
+
+create table ME(
+sid int8,
+sname varchar(50),
+smarks int1
+);
+
+show tables from VITCampus;
+select * from CSE;
+insert into CSE values (101, 'Prashant', 89);
+insert into CSE values (102, 'Akshat', 82);
+insert into CSE values (103, 'Shourya', 73);
+insert into CSE values (104, 'Pratyush', 97);
+insert into CSE values (105, 'Mridul', 78);
+
+select * from ECE;
+insert into ECE values (101, 'Priyansh', 89);
+insert into ECE values (102, 'Akshita', 73);
+insert into ECE values (103, 'Samiksha', 87);
+insert into ECE values (104, 'Prathmesh', 79);
+insert into ECE values (105, 'Mohan', 95);
+
+select * from ME;
+insert into ME values (101, 'Priyansh', 76);
+insert into ME values (102, 'Prasoon', 89);
+insert into ME values (103, 'Shatrughan', 72);
+insert into ME values (104, 'Prateek', 83);
+insert into ME values (105, 'Mrigank', 94);

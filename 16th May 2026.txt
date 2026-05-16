@@ -1,6 +1,9 @@
 show databases;
+
 create database VITCampus;
+
 use VITCampus;
+
 create table CSE(
 sid int8,
 sname varchar(50),

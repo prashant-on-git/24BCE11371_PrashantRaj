@@ -1,0 +1,30 @@
+CREATE TABLE Employee (
+    Emp_ID INT,
+    Name VARCHAR(50),
+    Salary INT,
+    Age INT
+);
+
+INSERT INTO Employee VALUES
+(1, 'Rahul', 25000, 22),
+(2, 'Aman', 40000, 28),
+(3, 'Priya', 35000, 24),
+(4, 'Neha', 50000, 30);
+
+SELECT * FROM Employee
+WHERE Age = 24;
+
+SELECT * FROM Employee
+WHERE Salary > 30000;
+
+SELECT * FROM Employee
+WHERE Age < 25;
+
+SELECT * FROM Employee
+WHERE Salary >= 40000;
+
+SELECT * FROM Employee
+WHERE Age <= 28;
+
+SELECT * FROM Employee
+WHERE Name != 'Rahul';

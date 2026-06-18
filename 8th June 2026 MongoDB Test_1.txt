@@ -1,0 +1,1275 @@
+use vit
+switched to db vit
+db.employees.insertMany([ { empId: 101, name: "Arun", age: 25, gender: "Male", department: "IT", salary: 45000, city: "Chennai", skills: ["Java", "MongoDB", "Spring"], experience: 3, active: true }, { empId: 102, name: "Priya", age: 28, gender: "Female", department: "HR", salary: 55000, city: "Bangalore", skills: ["Recruitment", "Training"], experience: 5, active: true }, { empId: 103, name: "Rahul", age: 32, gender: "Male", department: "IT", salary: 75000, city: "Mumbai", skills: ["Python", "MongoDB", "AWS"], experience: 8, active: true }, { empId: 104, name: "Sneha", age: 26, gender: "Female", department: "Finance", salary: 50000, city: "Delhi", skills: ["Excel", "Taxation"], experience: 4, active: false }, { empId: 105, name: "Karthik", age: 30, gender: "Male", department: "IT", salary: 68000, city: "Chennai", skills: ["NodeJS", "MongoDB", "React"], experience: 7, active: true }, { empId: 106, name: "Meena", age: 24, gender: "Female", department: "Marketing", salary: 42000, city: "Coimbatore", skills: ["SEO", "Content Writing"], experience: 2, active: true } ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a26bc2220783d09187088b7'),
+    '1': ObjectId('6a26bc2220783d09187088b8'),
+    '2': ObjectId('6a26bc2220783d09187088b9'),
+    '3': ObjectId('6a26bc2220783d09187088ba'),
+    '4': ObjectId('6a26bc2220783d09187088bb'),
+    '5': ObjectId('6a26bc2220783d09187088bc')
+  }
+}
+db.employees.find()
+{
+  _id: ObjectId('6a26bc2220783d09187088b7'),
+  empId: 101,
+  name: 'Arun',
+  age: 25,
+  gender: 'Male',
+  department: 'IT',
+  salary: 45000,
+  city: 'Chennai',
+  skills: [
+    'Java',
+    'MongoDB',
+    'Spring'
+  ],
+  experience: 3,
+  active: true
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088b8'),
+  empId: 102,
+  name: 'Priya',
+  age: 28,
+  gender: 'Female',
+  department: 'HR',
+  salary: 55000,
+  city: 'Bangalore',
+  skills: [
+    'Recruitment',
+    'Training'
+  ],
+  experience: 5,
+  active: true
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088b9'),
+  empId: 103,
+  name: 'Rahul',
+  age: 32,
+  gender: 'Male',
+  department: 'IT',
+  salary: 75000,
+  city: 'Mumbai',
+  skills: [
+    'Python',
+    'MongoDB',
+    'AWS'
+  ],
+  experience: 8,
+  active: true
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088ba'),
+  empId: 104,
+  name: 'Sneha',
+  age: 26,
+  gender: 'Female',
+  department: 'Finance',
+  salary: 50000,
+  city: 'Delhi',
+  skills: [
+    'Excel',
+    'Taxation'
+  ],
+  experience: 4,
+  active: false
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088bb'),
+  empId: 105,
+  name: 'Karthik',
+  age: 30,
+  gender: 'Male',
+  department: 'IT',
+  salary: 68000,
+  city: 'Chennai',
+  skills: [
+    'NodeJS',
+    'MongoDB',
+    'React'
+  ],
+  experience: 7,
+  active: true
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088bc'),
+  empId: 106,
+  name: 'Meena',
+  age: 24,
+  gender: 'Female',
+  department: 'Marketing',
+  salary: 42000,
+  city: 'Coimbatore',
+  skills: [
+    'SEO',
+    'Content Writing'
+  ],
+  experience: 2,
+  active: true
+}    ^
+db.students.insertMany([
+  { _id: 1, name: "Ananya",  age: 21, dept: "CS",  marks: 88, grades: ["A","B","A"], address: { city: "Chennai",   pin: "600001" }, active: true  },
+  { _id: 2, name: "Arjun",   age: 23, dept: "IT",  marks: 74, grades: ["B","C","B"], address: { city: "Madurai",   pin: "625001" }, active: true  },
+  { _id: 3, name: "Meena",   age: 20, dept: "CS",  marks: 95, grades: ["A","A","A"], address: { city: "Chennai",   pin: "600002" }, active: true  },
+  { _id: 4, name: "Ravi",    age: 22, dept: "ECE", marks: 61, grades: ["C","C","B"], address: { city: "Trichy",    pin: "620001" }, active: false },
+  { _id: 5, name: "Kavya",   age: 24, dept: "IT",  marks: 82, grades: ["A","B","B"], address: { city: "Coimbatore", pin: "641001" }, active: true  },
+  { _id: 6, name: "Dinesh",  age: 19, dept: "CS",  marks: 55, grades: ["C","D","C"], address: { city: "Salem",     pin: "636001" }, active: true  },
+  { _id: 7, name: "Priya",   age: 22, dept: "ECE", marks: 79, grades: ["B","B","A"], address: { city: "Chennai",   pin: "600003" }, active: true  },
+  { _id: 8, name: "Suresh",  age: 25, dept: "IT",  marks: 90, grades: ["A","A","B"], address: { city: "Madurai",   pin: "625002" }, active: false },
+  { _id: 9, name: "Rekha",   age: 21, dept: "CS",  marks: 68, grades: ["B","C","B"], address: { city: "Trichy",    pin: "620002" }, active: true  },
+  { _id: 10,name: "Vijay",   age: 23, dept: "ECE", marks: 45, grades: ["D","F","D"], address: { city: "Coimbatore", pin: "641002" }, active: false }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': 1,
+    '1': 2,
+    '2': 3,
+    '3': 4,
+    '4': 5,
+    '5': 6,
+    '6': 7,
+    '7': 8,
+    '8': 9,
+    '9': 10
+  }
+}
+db.products.insertMany([
+  { _id: 101, name: "Laptop",     category: "Electronics", price: 55000, stock: 20,  tags: ["portable","powerful"],         rating: 4.5, sold: 150 },
+  { _id: 102, name: "Phone",      category: "Electronics", price: 18000, stock: 50,  tags: ["portable","compact"],          rating: 4.2, sold: 320 },
+  { _id: 103, name: "Headphones", category: "Electronics", price: 3500,  stock: 80,  tags: ["audio","wireless"],           rating: 4.0, sold: 210 },
+  { _id: 104, name: "Desk Chair", category: "Furniture",    price: 8000,  stock: 15,  tags: ["ergonomic","office"],          rating: 4.3, sold: 45  },
+  { _id: 105, name: "Bookshelf",  category: "Furniture",    price: 4200,  stock: 30,  tags: ["storage","wood"],             rating: 3.8, sold: 60  },
+  { _id: 106, name: "Python Book",category: "Books",        price: 650,   stock: 100, tags: ["programming","education"],     rating: 4.7, sold: 500 },
+  { _id: 107, name: "Data Science",category:"Books",        price: 800,   stock: 70,  tags: ["data","education"],           rating: 4.6, sold: 380 },
+  { _id: 108, name: "Keyboard",   category: "Electronics", price: 2200,  stock: 0,   tags: ["mechanical","portable"],       rating: 4.4, sold: 275 },
+  { _id: 109, name: "Monitor",    category: "Electronics", price: 12000, stock: 10,  tags: ["display","4k"],               rating: 4.1, sold: 90  },
+  { _id: 110, name: "Mouse",      category: "Electronics", price: 900,   stock: 120, tags: ["wireless","compact"],         rating: 3.9, sold: 430 }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': 101,
+    '1': 102,
+    '2': 103,
+    '3': 104,
+    '4': 105,
+    '5': 106,
+    '6': 107,
+    '7': 108,
+    '8': 109,
+    '9': 110
+  }
+}
+db.students.find()
+{
+  _id: 1,
+  name: 'Ananya',
+  age: 21,
+  dept: 'CS',
+  marks: 88,
+  grades: [
+    'A',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600001'
+  },
+  active: true
+}
+{
+  _id: 2,
+  name: 'Arjun',
+  age: 23,
+  dept: 'IT',
+  marks: 74,
+  grades: [
+    'B',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Madurai',
+    pin: '625001'
+  },
+  active: true
+}
+{
+  _id: 3,
+  name: 'Meena',
+  age: 20,
+  dept: 'CS',
+  marks: 95,
+  grades: [
+    'A',
+    'A',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600002'
+  },
+  active: true
+}
+{
+  _id: 4,
+  name: 'Ravi',
+  age: 22,
+  dept: 'ECE',
+  marks: 61,
+  grades: [
+    'C',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Trichy',
+    pin: '620001'
+  },
+  active: false
+}
+{
+  _id: 5,
+  name: 'Kavya',
+  age: 24,
+  dept: 'IT',
+  marks: 82,
+  grades: [
+    'A',
+    'B',
+    'B'
+  ],
+  address: {
+    city: 'Coimbatore',
+    pin: '641001'
+  },
+  active: true
+}
+{
+  _id: 6,
+  name: 'Dinesh',
+  age: 19,
+  dept: 'CS',
+  marks: 55,
+  grades: [
+    'C',
+    'D',
+    'C'
+  ],
+  address: {
+    city: 'Salem',
+    pin: '636001'
+  },
+  active: true
+}
+{
+  _id: 7,
+  name: 'Priya',
+  age: 22,
+  dept: 'ECE',
+  marks: 79,
+  grades: [
+    'B',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600003'
+  },
+  active: true
+}
+{
+  _id: 8,
+  name: 'Suresh',
+  age: 25,
+  dept: 'IT',
+  marks: 90,
+  grades: [
+    'A',
+    'A',
+    'B'
+  ],
+  address: {
+    city: 'Madurai',
+    pin: '625002'
+  },
+  active: false
+}
+{
+  _id: 9,
+  name: 'Rekha',
+  age: 21,
+  dept: 'CS',
+  marks: 68,
+  grades: [
+    'B',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Trichy',
+    pin: '620002'
+  },
+  active: true
+}
+{
+  _id: 10,
+  name: 'Vijay',
+  age: 23,
+  dept: 'ECE',
+  marks: 45,
+  grades: [
+    'D',
+    'F',
+    'D'
+  ],
+  address: {
+    city: 'Coimbatore',
+    pin: '641002'
+  },
+  active: false
+}
+db.products.find()
+{
+  _id: 101,
+  name: 'Laptop',
+  category: 'Electronics',
+  price: 55000,
+  stock: 20,
+  tags: [
+    'portable',
+    'powerful'
+  ],
+  rating: 4.5,
+  sold: 150
+}
+{
+  _id: 102,
+  name: 'Phone',
+  category: 'Electronics',
+  price: 18000,
+  stock: 50,
+  tags: [
+    'portable',
+    'compact'
+  ],
+  rating: 4.2,
+  sold: 320
+}
+{
+  _id: 103,
+  name: 'Headphones',
+  category: 'Electronics',
+  price: 3500,
+  stock: 80,
+  tags: [
+    'audio',
+    'wireless'
+  ],
+  rating: 4,
+  sold: 210
+}
+{
+  _id: 104,
+  name: 'Desk Chair',
+  category: 'Furniture',
+  price: 8000,
+  stock: 15,
+  tags: [
+    'ergonomic',
+    'office'
+  ],
+  rating: 4.3,
+  sold: 45
+}
+{
+  _id: 105,
+  name: 'Bookshelf',
+  category: 'Furniture',
+  price: 4200,
+  stock: 30,
+  tags: [
+    'storage',
+    'wood'
+  ],
+  rating: 3.8,
+  sold: 60
+}
+{
+  _id: 106,
+  name: 'Python Book',
+  category: 'Books',
+  price: 650,
+  stock: 100,
+  tags: [
+    'programming',
+    'education'
+  ],
+  rating: 4.7,
+  sold: 500
+}
+{
+  _id: 107,
+  name: 'Data Science',
+  category: 'Books',
+  price: 800,
+  stock: 70,
+  tags: [
+    'data',
+    'education'
+  ],
+  rating: 4.6,
+  sold: 380
+}
+{
+  _id: 108,
+  name: 'Keyboard',
+  category: 'Electronics',
+  price: 2200,
+  stock: 0,
+  tags: [
+    'mechanical',
+    'portable'
+  ],
+  rating: 4.4,
+  sold: 275
+}
+{
+  _id: 109,
+  name: 'Monitor',
+  category: 'Electronics',
+  price: 12000,
+  stock: 10,
+  tags: [
+    'display',
+    '4k'
+  ],
+  rating: 4.1,
+  sold: 90
+}
+{
+  _id: 110,
+  name: 'Mouse',
+  category: 'Electronics',
+  price: 900,
+  stock: 120,
+  tags: [
+    'wireless',
+    'compact'
+  ],
+  rating: 3.9,
+  sold: 430
+}
+
+1. Find all students from the CS department with marks greater than 80.
+
+db.students.find(
+  {
+    dept: "CS",
+    marks: { $gt: 80 }
+  }
+)
+{
+  _id: 1,
+  name: 'Ananya',
+  age: 21,
+  dept: 'CS',
+  marks: 88,
+  grades: [
+    'A',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600001'
+  },
+  active: true
+}
+{
+  _id: 3,
+  name: 'Meena',
+  age: 20,
+  dept: 'CS',
+  marks: 95,
+  grades: [
+    'A',
+    'A',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600002'
+  },
+  active: true
+}
+
+2. Find students whose marks are between 60 and 85 (inclusive) using $gte and $lte.
+
+db.students.find(
+{
+    marks: {
+        $gte: 60,
+        $lte: 85
+    }
+}
+)
+{
+  _id: 2,
+  name: 'Arjun',
+  age: 23,
+  dept: 'IT',
+  marks: 74,
+  grades: [
+    'B',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Madurai',
+    pin: '625001'
+  },
+  active: true
+}
+{
+  _id: 4,
+  name: 'Ravi',
+  age: 22,
+  dept: 'ECE',
+  marks: 61,
+  grades: [
+    'C',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Trichy',
+    pin: '620001'
+  },
+  active: false
+}
+{
+  _id: 5,
+  name: 'Kavya',
+  age: 24,
+  dept: 'IT',
+  marks: 82,
+  grades: [
+    'A',
+    'B',
+    'B'
+  ],
+  address: {
+    city: 'Coimbatore',
+    pin: '641001'
+  },
+  active: true
+}
+{
+  _id: 7,
+  name: 'Priya',
+  age: 22,
+  dept: 'ECE',
+  marks: 79,
+  grades: [
+    'B',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600003'
+  },
+  active: true
+}
+{
+  _id: 9,
+  name: 'Rekha',
+  age: 21,
+  dept: 'CS',
+  marks: 68,
+  grades: [
+    'B',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Trichy',
+    pin: '620002'
+  },
+  active: true
+}
+
+3. Find all students who are either from IT or ECE department using $in operator.
+
+db.students.find({
+    dept: { $in: ["IT", "ECE"] }
+})
+{
+  _id: 2,
+  name: 'Arjun',
+  age: 23,
+  dept: 'IT',
+  marks: 74,
+  grades: [
+    'B',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Madurai',
+    pin: '625001'
+  },
+  active: true
+}
+{
+  _id: 4,
+  name: 'Ravi',
+  age: 22,
+  dept: 'ECE',
+  marks: 61,
+  grades: [
+    'C',
+    'C',
+    'B'
+  ],
+  address: {
+    city: 'Trichy',
+    pin: '620001'
+  },
+  active: false
+}
+{
+  _id: 5,
+  name: 'Kavya',
+  age: 24,
+  dept: 'IT',
+  marks: 82,
+  grades: [
+    'A',
+    'B',
+    'B'
+  ],
+  address: {
+    city: 'Coimbatore',
+    pin: '641001'
+  },
+  active: true
+}
+{
+  _id: 7,
+  name: 'Priya',
+  age: 22,
+  dept: 'ECE',
+  marks: 79,
+  grades: [
+    'B',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600003'
+  },
+  active: true
+}
+{
+  _id: 8,
+  name: 'Suresh',
+  age: 25,
+  dept: 'IT',
+  marks: 90,
+  grades: [
+    'A',
+    'A',
+    'B'
+  ],
+  address: {
+    city: 'Madurai',
+    pin: '625002'
+  },
+  active: false
+}
+{
+  _id: 10,
+  name: 'Vijay',
+  age: 23,
+  dept: 'ECE',
+  marks: 45,
+  grades: [
+    'D',
+    'F',
+    'D'
+  ],
+  address: {
+    city: 'Coimbatore',
+    pin: '641002'
+  },
+  active: false
+}
+
+4. Find students NOT in the CS department using $nin and project only name and dept.
+
+db.students.find(
+    {
+        dept: { $nin: ["CS"] }
+    },
+    {
+        _id: 0,
+        name: 1,
+        dept: 1
+    }
+)
+{
+  name: 'Arjun',
+  dept: 'IT'
+}
+{
+  name: 'Ravi',
+  dept: 'ECE'
+}
+{
+  name: 'Kavya',
+  dept: 'IT'
+}
+{
+  name: 'Priya',
+  dept: 'ECE'
+}
+{
+  name: 'Suresh',
+  dept: 'IT'
+}
+{
+  name: 'Vijay',
+  dept: 'ECE'
+}
+
+5. Find students where the address.city is 'Chennai' using dot notation.
+
+db.students.find({
+    "address.city": "Chennai"
+})
+{
+  _id: 1,
+  name: 'Ananya',
+  age: 21,
+  dept: 'CS',
+  marks: 88,
+  grades: [
+    'A',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600001'
+  },
+  active: true
+}
+{
+  _id: 3,
+  name: 'Meena',
+  age: 20,
+  dept: 'CS',
+  marks: 95,
+  grades: [
+    'A',
+    'A',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600002'
+  },
+  active: true
+}
+{
+  _id: 7,
+  name: 'Priya',
+  age: 22,
+  dept: 'ECE',
+  marks: 79,
+  grades: [
+    'B',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600003'
+  },
+  active: true
+}
+
+6. Find total revenue per category using $group and $sum on a computed field (price × sold).
+
+db.products.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      totalRevenue: {
+        $sum: { $multiply: ["$price", "$sold"] }
+      }
+    }
+  }
+])
+{
+  _id: 'Books',
+  totalRevenue: 629000
+}
+{
+  _id: 'Electronics',
+  totalRevenue: 16817000
+}
+{
+  _id: 'Furniture',
+  totalRevenue: 612000
+}
+
+7. Use aggregation to find total number of students and average marks per department.
+
+db.students.aggregate([
+  {
+    $group: {
+      _id: "$dept",
+      totalStudents: { $sum: 1 },
+      averageMarks: { $avg: "$marks" }
+    }
+  }
+])
+{
+  _id: 'IT',
+  totalStudents: 3,
+  averageMarks: 82
+}
+{
+  _id: 'CS',
+  totalStudents: 4,
+  averageMarks: 76.5
+}
+{
+  _id: 'ECE',
+  totalStudents: 3,
+  averageMarks: 61.666666666666664
+}
+
+8. Remove the 'scholarship' field from all students using $unset.
+
+db.students.updateMany(
+  {},
+  {
+    $unset: { scholarship: "" }
+  }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 10,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+9. Add a new field 'scholarship' with value false to all CS students using $set.
+
+db.students.updateMany(
+  { dept: "CS" },
+  {
+    $set: { scholarship: false }
+  }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 4,
+  upsertedCount: 0
+}
+
+10. Increment marks of student with _id:6 by 10 using $inc.
+
+db.students.updateOne(
+  { _id: 6 },
+  {
+    $inc: { marks: 10 }
+  }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+11. Find the 3rd and 4th highest scoring students using sort, skip, and limit (pagination).
+
+db.students.find()
+  .sort({ marks: -1 })
+  .skip(2)
+  .limit(2)
+{
+  _id: 1,
+  name: 'Ananya',
+  age: 21,
+  dept: 'CS',
+  marks: 88,
+  grades: [
+    'A',
+    'B',
+    'A'
+  ],
+  address: {
+    city: 'Chennai',
+    pin: '600001'
+  },
+  active: true,
+  scholarship: false
+}
+{
+  _id: 5,
+  name: 'Kavya',
+  age: 24,
+  dept: 'IT',
+  marks: 82,
+  grades: [
+    'A',
+    'B',
+    'B'
+  ],
+  address: {
+    city: 'Coimbatore',
+    pin: '641001'
+  },
+  active: true
+}
+
+12. Find employees whose salary is greater than 50000 and experience greater than 5.
+
+db.employees.find({
+  salary: { $gt: 50000 },
+  experience: { $gt: 5 }
+})
+{
+  _id: ObjectId('6a26bc2220783d09187088b9'),
+  empId: 103,
+  name: 'Rahul',
+  age: 32,
+  gender: 'Male',
+  department: 'IT',
+  salary: 75000,
+  city: 'Mumbai',
+  skills: [
+    'Python',
+    'MongoDB',
+    'AWS'
+  ],
+  experience: 8,
+  active: true
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088bb'),
+  empId: 105,
+  name: 'Karthik',
+  age: 30,
+  gender: 'Male',
+  department: 'IT',
+  salary: 68000,
+  city: 'Chennai',
+  skills: [
+    'NodeJS',
+    'MongoDB',
+    'React'
+  ],
+  experience: 7,
+  active: true
+}
+
+13. Find employees whose skills array size is greater than 2.
+
+db.employees.find({
+  $expr: {
+    $gt: [
+      { $size: "$skills" },
+      2
+    ]
+  }
+})
+{
+  _id: ObjectId('6a26bc2220783d09187088b7'),
+  empId: 101,
+  name: 'Arun',
+  age: 25,
+  gender: 'Male',
+  department: 'IT',
+  salary: 45000,
+  city: 'Chennai',
+  skills: [
+    'Java',
+    'MongoDB',
+    'Spring'
+  ],
+  experience: 3,
+  active: true
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088b9'),
+  empId: 103,
+  name: 'Rahul',
+  age: 32,
+  gender: 'Male',
+  department: 'IT',
+  salary: 75000,
+  city: 'Mumbai',
+  skills: [
+    'Python',
+    'MongoDB',
+    'AWS'
+  ],
+  experience: 8,
+  active: true
+}
+{
+  _id: ObjectId('6a26bc2220783d09187088bb'),
+  empId: 105,
+  name: 'Karthik',
+  age: 30,
+  gender: 'Male',
+  department: 'IT',
+  salary: 68000,
+  city: 'Chennai',
+  skills: [
+    'NodeJS',
+    'MongoDB',
+    'React'
+  ],
+  experience: 7,
+  active: true
+}
+
+14. Find departments whose average salary is greater than 50000.
+
+db.employees.aggregate([
+  {
+    $group: {
+      _id: "$department",
+      avgSalary: { $avg: "$salary" }
+    }
+  },
+  {
+    $match: {
+      avgSalary: { $gt: 50000 }
+    }
+  }
+])
+{
+  _id: 'IT',
+  avgSalary: 62666.666666666664
+}
+{
+  _id: 'HR',
+  avgSalary: 55000
+}
+
+15. Find minimum salary in each department.
+
+db.employees.aggregate([
+  {
+    $group: {
+      _id: "$department",
+      minSalary: { $min: "$salary" }
+    }
+  }
+])
+{
+  _id: 'HR',
+  minSalary: 55000
+}
+{
+  _id: 'IT',
+  minSalary: 45000
+}
+{
+  _id: 'Finance',
+  minSalary: 50000
+}
+{
+  _id: 'Marketing',
+  minSalary: 42000
+}
+
+16. Rename field city to location.
+
+db.employees.updateMany(
+  {},
+  {
+    $rename: { "city": "location" }
+  }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 6,
+  modifiedCount: 6,
+  upsertedCount: 0
+}
+
+17. Find products where stock is of type Number using $type operator.
+
+db.products.find({
+  stock: { $type: "number" }
+})
+{
+  _id: 101,
+  name: 'Laptop',
+  category: 'Electronics',
+  price: 55000,
+  stock: 20,
+  tags: [
+    'portable',
+    'powerful'
+  ],
+  rating: 4.5,
+  sold: 150
+}
+{
+  _id: 102,
+  name: 'Phone',
+  category: 'Electronics',
+  price: 18000,
+  stock: 50,
+  tags: [
+    'portable',
+    'compact'
+  ],
+  rating: 4.2,
+  sold: 320
+}
+{
+  _id: 103,
+  name: 'Headphones',
+  category: 'Electronics',
+  price: 3500,
+  stock: 80,
+  tags: [
+    'audio',
+    'wireless'
+  ],
+  rating: 4,
+  sold: 210
+}
+{
+  _id: 104,
+  name: 'Desk Chair',
+  category: 'Furniture',
+  price: 8000,
+  stock: 15,
+  tags: [
+    'ergonomic',
+    'office'
+  ],
+  rating: 4.3,
+  sold: 45
+}
+{
+  _id: 105,
+  name: 'Bookshelf',
+  category: 'Furniture',
+  price: 4200,
+  stock: 30,
+  tags: [
+    'storage',
+    'wood'
+  ],
+  rating: 3.8,
+  sold: 60
+}
+{
+  _id: 106,
+  name: 'Python Book',
+  category: 'Books',
+  price: 650,
+  stock: 100,
+  tags: [
+    'programming',
+    'education'
+  ],
+  rating: 4.7,
+  sold: 500
+}
+{
+  _id: 107,
+  name: 'Data Science',
+  category: 'Books',
+  price: 800,
+  stock: 70,
+  tags: [
+    'data',
+    'education'
+  ],
+  rating: 4.6,
+  sold: 380
+}
+{
+  _id: 108,
+  name: 'Keyboard',
+  category: 'Electronics',
+  price: 2200,
+  stock: 0,
+  tags: [
+    'mechanical',
+    'portable'
+  ],
+  rating: 4.4,
+  sold: 275
+}
+{
+  _id: 109,
+  name: 'Monitor',
+  category: 'Electronics',
+  price: 12000,
+  stock: 10,
+  tags: [
+    'display',
+    '4k'
+  ],
+  rating: 4.1,
+  sold: 90
+}
+{
+  _id: 110,
+  name: 'Mouse',
+  category: 'Electronics',
+  price: 900,
+  stock: 120,
+  tags: [
+    'wireless',
+    'compact'
+  ],
+  rating: 3.9,
+  sold: 430
+}
+
+18. Set the active status to true for all inactive students using updateMany and $set.
+
+db.students.updateMany(
+  { active: false },
+  {
+    $set: { active: true }
+  }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
